@@ -1,0 +1,11 @@
+hyprshot 1.3.0-2
+oh-my-zsh-git r7537.95ef25166-1
+oneko-debug 1.2.5-6
+rose-pine-cursor 1.1.0-2
+rose-pine-hyprcursor v0.3.2.r0.d2c0e680-1
+spotify 1:1.2.63.394-1
+visual-studio-code-bin 1.100.2-1
+xcursor-breeze 1:6.3.3-1
+yay 12.5.0-1
+yay-debug 12.5.0-1
+zoom-system-qt 6.4.12.2180-1

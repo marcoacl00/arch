@@ -1,0 +1,255 @@
+[{
+  "layer": "top",
+  "css-name": "topbar",
+  "position": "top",
+  "font": "Nimbus Sans Bold 10",
+  "modules-center": ["hyprland/workspaces"],
+  "modules-left": ["custom/icon", "clock"],
+  "modules-right": ["mpris", "custom/separatortop", "network", "bluetooth", "power-profiles-daemon", "battery", "pulseaudio", "temperature#cpu"],
+
+
+"hyprland/workspaces": {
+	"format": "{name}",
+	"show-special": false,
+	"on-click": "activate",
+	"on-scroll-up": "hyprctl dispatch workspace e+1",
+	"on-scroll-down": "hyprctl dispatch workspace e-1",
+	"all-outputs": true,
+	"sort-by-number": true
+},
+
+  "custom/separatortop": {
+    "format": " | ",
+    "interval": "once",
+    "tooltip": false
+  },
+
+
+  "clock": {
+    "format": "{:%d %b %Y · %H:%M}",
+    "interval": 1,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{:%V}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+    }
+  }
+},
+
+
+  "cpu": {
+    "format": "{usage}%",
+    "interval": 1,
+    "min-length": 1,
+    "format-alt-click": "click",
+    "format-alt": "{icon0} {usage:>2}%",
+    "format-icons": [
+      "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"
+    ]
+  },
+
+
+  "memory": {
+    "format": "RAM: {used:0.1f}G/{total:0.1f}G"
+  },
+
+  "network": {
+    "format-wifi": "{icon}",
+    "format-icons": ["", "", ""],
+    "format-ethernet": "LAN: {ifname}",
+    "format-disconnected": "No network",
+    "on-click": "nm-connection-editor"
+  },
+
+"battery": {
+	"interval": 5,
+	"align": 0,
+	"rotate": 0,
+	"full-at": 100,
+	"design-capacity": false,
+	"states": {
+		"good": 89,
+		"warning": 30,
+		"critical": 15
+	},
+	"format": "{icon}",
+	"format-charging": "󰂄",
+	"format-alt-click": "click",
+	"format-full": "{icon} Full",
+	"format-alt": "{icon} {time}",
+	"format-icons": [
+		"󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+	],
+	"format-time": "{H}h {M}min",
+	"tooltip": true,
+	"tooltip-format": "Battery: {capacity}%",
+  "tooltip-format-charging": "Battery: {capacity}% (charging)"
+},
+
+
+
+
+"pulseaudio": {
+	"format": "{icon}",
+	"format-bluetooth": "{icon}",
+	"format-muted": "󰖁",
+	"format-icons": {
+		"headphone": "",
+		"hands-free": "",
+		"headset": "",
+		"phone": "",
+		"portable": "",
+		"car": "",
+		"default": [
+			"", "", "󰕾",  ""
+		],
+		"ignored-sinks": [
+			"Easy Effects Sink"
+		]
+	},
+	"scroll-step": 5.0,
+	"on-click-right": "$HOME/.config/waybar/scripts/Volume.sh --toggle",
+	"on-scroll-up": "$HOME/.config/waybar/scripts/Volume.sh --inc",
+	"on-scroll-down": "$HOME/.config/waybar/scripts/Volume.sh --dec",
+	"tooltip-format": "{icon} {desc} | {volume}%",
+	"smooth-scrolling-threshold": 1
+},
+
+  "mpris": {
+    "interval": 3,
+    "format": "{player_icon} ",
+    "format-paused": "{status_icon} <i>{dynamic}</i>",
+    "on-click-middle": "playerctl play-pause",
+    "on-click": "playerctl previous",
+    "on-click-right": "playerctl next",
+    "scroll-step": 5.0,
+    "on-scroll-up": "$HOME/.config/waybar/scripts/Volume.sh --inc",
+    "on-scroll-down": "$HOME/.config/waybar/scripts/Volume.sh --dec",
+    "smooth-scrolling-threshold": 1,
+    "tooltip": true,
+    "tooltip-format": "{status_icon} {dynamic}\nLeft Click: previous\nMid Click: Pause\nRight Click: Next",
+    "player-icons": {
+      "chromium": "",
+      "default": "",
+      "firefox": "",
+      "mopidy": "",
+      "mpv": "󰐹",
+      "spotify": "",
+      "vlc": "󰕼"
+    },
+    "status-icons": {
+      "paused": "󰐎",
+      "playing": "",
+      "stopped": ""
+    },
+    "ignored-players": ["firefox"],
+    "max-length": 30
+  },
+
+
+  
+  "custom/icon": {
+    "format": "󰣇"
+},
+
+  "temperature#cpu": {
+    "interval": 1,
+    "tooltip": false,
+    "hwmon-path": "/sys/devices/platform/thinkpad_hwmon/hwmon/hwmon7/temp1_input",
+    "critical-threshold": 82,
+    "format-critical": "{temperatureC}°C!",
+    "format": "{temperatureC}°C"
+  },
+
+
+  "bluetooth": {
+    "format": "󰂯",
+    "format-disabled":  "",
+    "tooltip-format": "󰂯 {device_alias}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": " {device_alias} 󰂄{device_battery_percentage}%",
+    "tooltip": true,
+    "on-click": "blueman-manager"
+},
+
+"power-profiles-daemon": {
+  "format": " {icon}",
+  "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+  "tooltip": true,
+  "format-icons": {
+    "default": "",
+    "performance": "",
+    "balanced": "",
+    "power-saver": ""
+  }
+},
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10
+  }
+},
+
+{
+  "layer": "top",
+  "css-name": "botbar",
+  "position": "bottom",
+  "font": "Nimbus Sans Bold 10",
+  "modules-center": ["custom/firefox", "custom/thunderbird", "custom/spotify", "custom/separator", "wlr/taskbar"],
+
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 33,
+    "all-outputs": false,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+      "wofi",
+      "rofi"
+      ]
+  },
+
+  "custom/separator": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+
+  "custom/firefox": {
+    "format": "",  
+    "tooltip-format": "Launch Firefox",
+    "exec": "echo firefox",  
+    "on-click": "firefox",
+    "interval": 86400  
+},
+
+  "custom/thunderbird": {
+    "format": "󰇮",  
+    "tooltip-format": "Launch Firefox",
+    "exec": "echo thunderbird",  
+    "on-click": "thunderbird",
+    "interval": 86400  
+},
+
+  "custom/spotify": {
+    "format": "",  
+    "tooltip-format": "Launch Spotify",
+    "exec": "echo spotify --enable-features=UseOzonePlatform --ozone-platform=wayland --log debug --log-level debug",  
+    "on-click": "spotify --enable-features=UseOzonePlatform --ozone-platform=wayland --log debug --log-level debug",
+    "interval": 86400  
+}
+
+
+}
+
+]
+

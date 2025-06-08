@@ -1,0 +1,64 @@
+[
+{
+  "layer": "top",
+  "css-name": "botbar",
+  "position": "bottom",
+  "font": "Nimbus Sans Bold 10",
+  "modules-center": ["custom/firefox", "custom/thunderbird", "custom/spotify", "custom/terminal", "custom/separator", "wlr/taskbar"],
+
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 33,
+    "all-outputs": false,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+      "wofi",
+      "rofi"
+      ]
+  },
+
+  "custom/separator": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+
+  "custom/firefox": {
+    "format": "",  
+    "tooltip-format": "Launch Firefox",
+    "exec": "echo firefox",  
+    "on-click": "firefox",
+    "interval": 86400  
+},
+
+  "custom/thunderbird": {
+    "format": "󰇮",  
+    "tooltip-format": "Launch Firefox",
+    "exec": "echo thunderbird",  
+    "on-click": "thunderbird",
+    "interval": 86400  
+},
+
+  "custom/spotify": {
+    "format": "",  
+    "tooltip-format": "Launch Spotify",
+    "exec": "echo spotify --enable-features=UseOzonePlatform --ozone-platform=wayland --log debug --log-level debug",  
+    "on-click": "spotify --enable-features=UseOzonePlatform --ozone-platform=wayland --log debug --log-level debug",
+    "interval": 86400  
+},
+
+  "custom/terminal": {
+    "format": "",  
+    "tooltip-format": "Launch Kitty",
+    "exec": "echo kitty",  
+    "on-click": "kitty",
+    "interval": 86400  
+}
+
+
+}
+
+]
+

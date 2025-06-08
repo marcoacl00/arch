@@ -1,0 +1,59 @@
+* {
+  font-family: "Nimbus Sans", "Symbols Nerd Font Mono", "Font Awesome 6 Free", "Material Symbols Outlined", "DroidSansM Nerd Font Mono ", sans-serif;
+
+  margin: 0;
+  min-height: 12pt;
+  font-size: 10pt;
+  padding-top: 1px;
+}
+
+
+
+#taskbar button{
+    padding: 0px 4px;
+    border-radius: 10px;
+    background: transparent;
+    color: #ffffff;
+    border: 0.4px solid #555555;
+}
+
+window {
+  background-color: rgba(0, 6, 7, 0); /* 0.0 (fully transparent) to 1.0 (opaque) */
+  border: none;
+  color: white;
+}
+
+
+
+#custom-firefox {
+    font-size: 30px; /* Change to desired size */
+      padding: 0px 4px; /* vertical: 0, horizontal: 6px */
+    color: #ff7316;
+}
+
+#custom-thunderbird {
+    font-size: 30px; /* Change to desired size */
+      padding: 0px 7px; /* vertical: 0, horizontal: 6px */
+    color: #00edc5;
+}
+
+#custom-spotify {
+    font-size: 30px; /* Change to desired size */
+      padding: 0px 7px; /* vertical: 0, horizontal: 6px */
+    color: #09ff00;
+}
+
+#custom-terminal {
+    font-size: 30px; /* Change to desired size */
+      padding: 0px 7px; /* vertical: 0, horizontal: 6px */
+    color: #8cf7ff;
+}
+
+
+
+#custom-separator {
+    font-size: 23px; /* Change to desired size */
+      padding: 0px 5px; /* vertical: 0, horizontal: 6px */
+
+}
+

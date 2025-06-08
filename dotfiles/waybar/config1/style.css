@@ -1,0 +1,130 @@
+* {
+  font-family: "Nimbus Sans", "Symbols Nerd Font Mono", "Font Awesome 6 Free", "Material Symbols Outlined", "DroidSansM Nerd Font Mono ", sans-serif;
+
+  margin: 0;
+  min-height: 12pt;
+  font-size: 10pt;
+  padding-top: 1px;
+}
+
+#memory{
+  color : #0090b8
+}
+
+#taskbar button{
+    padding: 0px 6px;
+    border-radius: 10px;
+    background: transparent;
+    color: #ffffff;
+    border: 0.7px solid #555555;
+}
+
+window {
+  background-color: rgba(0, 6, 7, 0.648); /* 0.0 (fully transparent) to 1.0 (opaque) */
+  border: none;
+  color: white;
+}
+
+
+#custom-icon {
+    font-size: 20px; /* Change to desired size */
+      padding: 2px 7px; /* vertical: 0, horizontal: 6px */
+      color: #0092ac;
+}
+
+#mpris {
+    font-size: 16px; /* Change to desired size */
+      padding: 2px 7px; /* vertical: 0, horizontal: 6px */
+      color: #36e70a;
+}
+
+#temperature{
+  padding-right: 12px;
+  padding-left: 6px;
+
+  padding-top: 3px;
+  font-size: 14px; /* Change to desired size */
+}
+
+#custom-gpu{
+    color : #00e908
+
+}
+
+#cpu{
+  color : #f4921a
+}
+
+#clock {
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  font-size: 11pt; /* overall font size */
+   font-weight: bold;
+    color: #ffffff;
+
+
+}
+
+#bluetooth {
+  font-size: 14pt;
+    padding: 0px 5px; /* vertical: 0, horizontal: 6px */
+  color: #0a78e7;
+}
+
+#network {
+  font-size: 14pt;
+    padding: 0px 5px; /* vertical: 0, horizontal: 6px */
+    color: #a0e1c2;
+}
+
+#battery{
+    font-size: 12pt;
+      padding: 0px 5px; /* vertical: 0, horizontal: 6px */
+
+}
+
+#pulseaudio{
+  font-size: 12pt;
+    padding: 0px 6px; /* vertical: 0, horizontal: 6px */
+
+}
+
+#icon{
+  font-size: 24pt;
+}
+
+#workspaces button {
+    padding: 0px 8px;
+    margin: 1px;
+    border-radius: 6px;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #555555;
+}
+
+#workspaces button:hover {
+    background: #444444;
+}
+
+#workspaces button.active {
+    background-color: rgba(17, 39, 71, 0.4);  /* Highlight color */
+    color: #ffffff;
+    border: 1px solid rgba(85, 85, 85, 0.5);
+    font-weight: bold;
+}
+
+#custom-separatortop {
+    font-size: 17px; /* Change to desired size */
+      padding: 0px 0px; /* vertical: 0, horizontal: 6px */
+
+}
+
+#workspaces button.urgent {
+    background: #bf616a;
+    color: #ffffff;
+    border-color: #bf616a;
+}
+
